@@ -3,7 +3,7 @@
 :root {
     --w-color: #fff;
     --b-color: #000;
-    --border: 2px solid #bbbbbb5f;
+    --border: 1px solid #bbbbbb5f;
     --main-color: #fe470d;
     --transition-3: 0.3s;
 }
