@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="checkOut.css">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header class="header">
+        <section class="container">
+            <a href="#" class="logo">
+                <img width="100" src="https://cdn.worldvectorlogo.com/logos/sa-logo-1.svg" alt="logo">
+            </a>
+        </section>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Main -->
+    <main class="main">
+        <section class="container">
+            <section class="main-title">
+                <h1>الدفع والتأكيد</h1>
+            </section>
+
+            <section class="det">
+                <section class="right">
+                    <section class="title">
+                        <p>طريقة الدفع:</p>
+                    </section>
+
+                    <form>
+                        <section class="check">
+                            <input type="radio" name="payment" id="visa" checked>
+                            <label for="visa">
+                                بطاقة مدي البنكية - بطاقة إتمانية
+                            </label>
+                        </section>
+
+                        <section class="visa">
+                            <section class="visa-name">
+                                <label for="visaName">الاسم علي البطاقة:</label>
+                                <input type="text" name="visaName" id="visaName" class="input">
+                            </section>
+                            <section class="visaNumber">
+                                <label for="visaNumber">رقم البطاقة:</label>
+                                <input type="text" name="visaNumber" id="visaNumber" class="input">
+                            </section>
+                            <section class="date">
+                                <section class="ex">
+                                    <label for="ex">تاريخ انتهاء البطاقة:</label>
+                                    <input type="text" name="ex" id="ex" class="input">
+                                </section>
+                                <section class="cvv">
+                                    <label for="cvv">رمز الأمان:</label>
+                                    <input type="text" name="cvv" id="cvv" class="input">
+                                </section>
+                            </section>
+                            <section class="delivery">
+                                <label for="location">التوصيل إلي:</label>
+                                <input type="text" name="location" id="location" class="input">
+                            </section>
+                            <section class="notes">
+                                <label for="notes">المحلاظات:</label>
+                                <textarea name="notes" id="notes"></textarea>
+                            </section>
+
+                            <section class="btn-pay">
+                                <span>بالضغط علي الزرأدناه فأنت توافق علي <a href="#">الشروط والأحكام</a></span>
+                                <button class="btn">تأكيد الدفع</button>
+                            </section>
+                        </section>
+                    </form>
+
+                </section>
+                <section class="left">
+
+                    <!-- بداية جدول تفاصيل الطلب -->
+                    <section class="title">
+                        <p>تفاصيل الطلب:</p>
+                    </section>
+
+                    <table>
+                        <tr>
+                            <td> ضريبة القيمة المضافة </td>
+                            <td>SAR <span>1500</span></td>
+                        </tr>
+                        <tr>
+                            <td>المجموع الفرعي (15 منتج)</td>
+                            <td>SAR <span>1500</span></td>
+                        </tr>
+                        <tr>
+                            <td>رسوم التوصيل</td>
+                            <td>SAR <span>1500</span></td>
+                        </tr>
+                        <tr>
+                            <td>المجموع</td>
+                            <td>SAR <span>1500</span></td>
+                        </tr>
+                    </table>
+                    <!-- نهاية جدول تفاصيل الطلب -->
+
+                    <!-- بداية قسم المنتجات -->
+                    <section class="title">
+                        <p>المنتجات:</p>
+                    </section>
+
+                    <section class="boxs">
+                        <section class="box">
+                            <section class="box-det">
+                                <span class="number-of-pieces">10</span>
+                                <img src="https://media.zid.store/thumbs/53c55bed-495d-41a0-ba39-f3fe9b38e3d3/f175b777-c7be-454d-ae82-f77cc88ed27b-thumbnail-1000x1000-70.jpg"
+                                    alt="img">
+                                <span>دجاج كامل طازج 600 جرام</span>
+                            </section>
+
+                            <section class="box-total">
+                                <p>SAR <span>160</span></p>
+                            </section>
+                        </section>
+
+                        <section class="box">
+                            <section class="box-det">
+                                <span class="number-of-pieces">10</span>
+                                <img src="https://media.zid.store/thumbs/53c55bed-495d-41a0-ba39-f3fe9b38e3d3/f175b777-c7be-454d-ae82-f77cc88ed27b-thumbnail-1000x1000-70.jpg"
+                                    alt="img">
+                                <span>دجاج كامل طازج 600 جرام</span>
+                            </section>
+
+                            <section class="box-total">
+                                <p>SAR <span>160</span></p>
+                            </section>
+                        </section>
+
+                        <section class="box">
+                            <section class="box-det">
+                                <span class="number-of-pieces">10</span>
+                                <img src="https://media.zid.store/thumbs/53c55bed-495d-41a0-ba39-f3fe9b38e3d3/f175b777-c7be-454d-ae82-f77cc88ed27b-thumbnail-1000x1000-70.jpg"
+                                    alt="img">
+                                <span>دجاج كامل طازج 600 جرام</span>
+                            </section>
+
+                            <section class="box-total">
+                                <p>SAR <span>160</span></p>
+                            </section>
+                        </section>
+                    </section>
+                    <!-- نهاية قسم المنتجات -->
+
+                    <!-- بداية قسم شركةالتوصيل -->
+                    <section class="title">
+                        <p>التوصيل بواسة:</p>
+                    </section>
+
+                    <section class="company">
+                        <p>أسطول الوطنية للشحن</p>
+                    </section>
+                    <!-- نهاية قسم شركةالتوصيل -->
+                </section>
+            </section>
+        </section>
+    </main>
+    <!-- End Main -->
+</body>
+
+</html>

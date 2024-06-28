@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+:root {
+    --w-color: #fff;
+    --b-color: #000;
+    --border: 2px solid #bbbbbb5f;
+    --main-color: #fe470d;
+    --transition-3: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    scroll-behavior: smooth;
+    direction: rtl;
+}
+
+.container {
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+@media (min-width: 786px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 991px) {
+    .container {
+        width: 950px;
+    }
+}
+
+@media (min-width: 1199px) {
+    .container {
+        width: 1150px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+a {
+    display: inline-block;
+}
+
+input,
+textarea,
+button {
+    outline: none;
+    border: none;
+    font-family: "Cairo", sans-serif;
+    font-size: 18px;
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--w-color);
+    padding: 5px 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Start Header */
+.header {
+    border-bottom: var(--border);
+}
+
+.header .container {
+    padding-block: 15px;
+}
+
+.header .container .logo {
+    width: 100%;
+}
+
+.header .container .logo img {
+    width: 80px;
+    display: block;
+    margin: auto;
+}
+
+/* End Header */
+
+/* Start Main */
+.main .container {
+    padding-block: 50px;
+}
+
+.main .container .main-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.main .container .det {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media (max-width: 786px) {
+    .main .container .det {
+        flex-direction: column-reverse;
+    }
+    .main .container .det .left {
+        padding-bottom: 30px;
+        border-bottom: var(--border);
+        border-width: 7px;
+    }
+}
+
+.main .container .right,
+.main .container .left {
+    flex: 1;
+}
+
+.title {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main .container .right form {
+    width: 100%;
+    border: var(--border);
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: var(--border);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.main .container .right form section {
+    padding-inline: 5px;
+}
+
+.main .container .right form label {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.main .container .right form input:not(.check input),
+.main .container .right form textarea {
+    padding: 5px 10px;
+    width: 100%;
+    border: var(--border);
+    transition: var(--transition-3);
+    margin-bottom: 7px;
+}
+
+.main .container .right form textarea {
+    margin-bottom: 30px;
+    resize: none;
+    overflow: auto;
+}
+
+.main .container .right form input:not(.check input):focus,
+.main .container .right form textarea:focus {
+    border-color: var(--main-color);
+}
+
+.btn-pay {
+    text-align: center;
+
+    span {
+        display: block;
+
+        a {
+            color: var(--main-color);
+        }
+    }
+}
+
+
+/* Satrt Main left */
+/* Start Table */
+.main .container .left table {
+    width: 100%;
+    border-collapse: collapse;
+    border: var(--border);
+    margin-bottom: 25px;
+}
+
+.main .container .left table tr {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.main .container .left table tr:not(:last-child) {
+    border-bottom: var(--border);
+}
+
+.main .container .left table tr:last-child {
+    color: var(--main-color);
+}
+
+/* End Table */
+
+.main .container .left .boxs {
+    display: flex;
+    flex-direction: column;
+    border: var(--border);
+    margin-bottom: 25px;
+}
+
+.main .container .left .boxs .box {
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .container .left .boxs .box:not(:last-child) {
+    border-bottom: var(--border);
+}
+
+.main .container .left .boxs .box .box-det {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.main .container .left .boxs .box .box-det .number-of-pieces {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: var(--w-color);
+    background-color: var(--main-color);
+    line-height: 1;
+    padding: 3px;
+    font-size: 14px;
+}
+
+.main .container .left .boxs .box .box-det img {
+    width: 75px;
+}
+
+/* End Main left */
+
+/* Start company */
+.company {
+    padding: 15px;
+    border: var(--border);
+}
+/* End company */
+/* End Main */
