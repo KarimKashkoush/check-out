@@ -121,9 +121,9 @@ let transferNameCheck = transferName.onblur = () => {
 
 let transferNumberCheck = transferNumber.onblur = () => {
     if (transferNumber.value == "") {
-        setError(transferNumber, "رقم الحساب او الأيبان المحولمنه مطلوب")
+        setError(transferNumber, "رقم الحساب او الأيبان المحول منه مطلوب")
     } else if (transferNumber.value.length < 16) {
-        setError(transferNumber, "برجاء ادخال رقم الحساب أوالأيبان بشكل صحيح ")
+        setError(transferNumber, "برجاء ادخال رقم الحساب أو الأيبان بشكل صحيح ")
     } else {
         setSucces(transferNumber)
     }
