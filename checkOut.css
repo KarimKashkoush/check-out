@@ -174,6 +174,20 @@ button {
     border-color: var(--main-color);
 }
 
+.errorma {
+    display: block;
+    color: red;
+    margin-bottom:15px;
+}
+
+.main .container .right form .error {
+    border-color: red !important; 
+}
+
+.main .container .right form .succes {
+    border-color: rgb(32, 137, 224) !important; 
+}
+
 .btn-pay {
     text-align: center;
 

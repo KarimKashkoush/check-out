@@ -33,36 +33,44 @@
                         <p>طريقة الدفع:</p>
                     </section>
 
-                    <form>
+                    <form id="payment">
                         <section class="check">
                             <input type="radio" name="payment" id="visa" checked>
                             <label for="visa">
                                 بطاقة مدي البنكية - بطاقة إتمانية
                             </label>
                         </section>
-
+                        
                         <section class="visa">
                             <section class="visa-name">
                                 <label for="visaName">الاسم علي البطاقة:</label>
                                 <input type="text" name="visaName" id="visaName" class="input">
+                                <span class="errorma"></span>
                             </section>
                             <section class="visaNumber">
                                 <label for="visaNumber">رقم البطاقة:</label>
-                                <input type="text" name="visaNumber" id="visaNumber" class="input">
+                                <input type="text" placeholder="0000 0000 0000 0000" name="visaNumber" id="visaNumber"
+                                class="input" oninput="CreditCardNumber(this)">
+                                <span class="errorma"></span>
                             </section>
                             <section class="date">
                                 <section class="ex">
                                     <label for="ex">تاريخ انتهاء البطاقة:</label>
-                                    <input type="text" name="ex" id="ex" class="input">
+                                    <input type="text" name="ex" id="ex" class="input" placeholder="شهر / سنة"
+                                    oninput="formatEX(this)">
+                                    <span class="errorma"></span>
                                 </section>
                                 <section class="cvv">
                                     <label for="cvv">رمز الأمان:</label>
-                                    <input type="text" name="cvv" id="cvv" class="input">
+                                    <input type="text" name="cvv" id="cvv" class="input" placeholder="000"
+                                    oninput="formatCVV(this)">
+                                    <span class="errorma"></span>
                                 </section>
                             </section>
                             <section class="delivery">
-                                <label for="location">التوصيل إلي:</label>
-                                <input type="text" name="location" id="location" class="input">
+                                <label for="loca">التوصيل إلي:</label>
+                                <input type="text" name="location" id="loca" class="input">
+                                <span class="errorma"></span>
                             </section>
                             <section class="notes">
                                 <label for="notes">المحلاظات:</label>
@@ -165,6 +173,9 @@
         </section>
     </main>
     <!-- End Main -->
+
+
+    <script src="checkOut.js"></script>
 </body>
 
 </html>
