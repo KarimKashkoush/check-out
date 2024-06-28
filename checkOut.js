@@ -44,6 +44,14 @@ let methodPayment = document.getElementById("methodPayment")
 let transferPayment = document.getElementById("transferPayment")
 let transferName = document.getElementById("transferName")
 let transferNumber = document.getElementById("transferNumber")
+let personalName = document.getElementById("personalName")
+let tele = document.getElementById("tele")
+let personalName1 = document.getElementById("personalName1")
+let tele1 = document.getElementById("tele1")
+let personalName2 = document.getElementById("personalName2")
+let tele2 = document.getElementById("tele2")
+let loca1 = document.getElementById("loca1");
+let loca2 = document.getElementById("loca2");
 
 
 let setSucces = (ele) => {
@@ -63,7 +71,6 @@ let setError = (ele, errorMa) => {
     ele.classList.add("error")
     ele.classList.remove("succes")
 }
-
 
 for (let i = 0; i < trans.length; i++) {
     if (trans[i].checked) {
@@ -98,6 +105,8 @@ payment.onsubmit = (e) => {
     visaExCheck()
     visaCvvCheck()
     locationCheck()
+    personalNameCheck()
+    teleCheck()
 }
 
 transferPayment.onsubmit = (e) => {
@@ -106,6 +115,30 @@ transferPayment.onsubmit = (e) => {
 
         transferNameCheck()
         transferNumberCheck()
+        personalNameCheck()
+        teleCheck()
+    }
+}
+
+let personalNameCheck = personalName.onblur = () => {
+    if (personalName.value == "") { 
+        setError(personalName, "الاسم مطلوب")
+    } else if (personalName.value.length < 4) {
+        setError(personalName, "الاسم يجب ان يكون اكثر من 4 حروف")
+    } else {
+        setSucces(personalName)
+        personalName1.value = personalName.value;
+        personalName2.value = personalName.value;
+    }
+}
+
+let teleCheck = tele.onblur = () => {
+    if (tele.value == "") { 
+        setError(tele, "رقم الهاتف مطلوب")
+    } else {
+        setSucces(tele)
+        tele1.value = tele.value
+        tele2.value = tele.value
     }
 }
 
@@ -176,6 +209,8 @@ let locationCheck = loca.onblur = () => {
         setError(loca, " برجاء ادخال العنوان بشكل صحيح ")
     } else {
         setSucces(loca)
+        loca1.value = loca.value
+        loca2.value = loca.value
     }
 }
 

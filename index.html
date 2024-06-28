@@ -30,12 +30,32 @@
             <section class="det">
                 <section class="right" id="right">
                     <section class="payment">
-                        <section class="title">
-                            <p>طريقة الدفع:</p>
-                        </section>
+                        <form>
+                            <section class="personal-name">
+                                <label for="personalName">الاسم:</label>
+                                <input type="text" class="input" name="personalName" id="personalName">
+                                <span class="errorma"></span>
+                            </section>
+
+                            <section class="personal-name">
+                                <label for="tele">رقم الهاتف:</label>
+                                <input type="tel" class="input" name="tele" id="tele">
+                                <span class="errorma"></span>
+                            </section>
+
+                            <section class="delivery">
+                                <label for="loca">التوصيل إلي:</label>
+                                <input type="text" name="location" id="loca" class="input">
+                                <span class="errorma"></span>
+                            </section>
+                        </form>
 
                         <form class="method-payment" id="methodPayment">
                             <section class="check">
+                                <section class="title">
+                                    <p>طريقة الدفع:</p>
+                                </section>
+
                                 <section class="card">
                                     <section class="input">
                                         <input type="radio" name="trans" id="mada" value="mada" checked>
@@ -69,6 +89,9 @@
                         </form>
 
                         <form id="payment">
+                            <input type="text" id="personalName1" name="personalName1" style="display: none;">
+                            <input type="text" id="tele1" name="tele1" style="display: none;">
+                            <input type="text" id="loca1" name="loca1" style="display: none;">
                             <input style="display: none;" type="text" id="methodPaymentInput" name="methodPaymentInput">
                             <section class="visa">
                                 <section class="visa-name">
@@ -96,13 +119,8 @@
                                         <span class="errorma"></span>
                                     </section>
                                 </section>
-                                <section class="delivery">
-                                    <label for="loca">التوصيل إلي:</label>
-                                    <input type="text" name="location" id="loca" class="input">
-                                    <span class="errorma"></span>
-                                </section>
                                 <section class="notes">
-                                    <label for="notes">المحلاظات:</label>
+                                    <label for="notes">الملاحظات:</label>
                                     <textarea name="notes" id="notes"></textarea>
                                 </section>
 
@@ -114,6 +132,10 @@
                         </form>
 
                         <form id="transferPayment" style="display: none;">
+                            <input type="text" id="personalName2" name="personalName2" style="display: none;">
+                            <input type="text" id="tele2" name="tele2" style="display: none;">
+                            <input type="text" id="loca2" name="loca2" style="display: none;">
+                            <input style="display: none;" type="text" id="methodPaymentInput1" name="methodPaymentInput1">
                             <section class="name">
                                 <label for="name">اسم صاحب الحساب:</label>
                                 <input type="text" id="transferName" name="transferName">
