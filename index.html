@@ -32,58 +32,106 @@
                     <section class="title">
                         <p>طريقة الدفع:</p>
                     </section>
+                    <section class="payment">
 
-                    <form id="payment">
-                        <section class="check">
-                            <input type="radio" name="payment" id="visa" checked>
-                            <label for="visa">
-                                بطاقة مدي البنكية - بطاقة إتمانية
-                            </label>
-                        </section>
-                        
-                        <section class="visa">
-                            <section class="visa-name">
-                                <label for="visaName">الاسم علي البطاقة:</label>
-                                <input type="text" name="visaName" id="visaName" class="input">
-                                <span class="errorma"></span>
-                            </section>
-                            <section class="visaNumber">
-                                <label for="visaNumber">رقم البطاقة:</label>
-                                <input type="text" placeholder="0000 0000 0000 0000" name="visaNumber" id="visaNumber"
-                                class="input" oninput="CreditCardNumber(this)">
-                                <span class="errorma"></span>
-                            </section>
-                            <section class="date">
-                                <section class="ex">
-                                    <label for="ex">تاريخ انتهاء البطاقة:</label>
-                                    <input type="text" name="ex" id="ex" class="input" placeholder="شهر / سنة"
-                                    oninput="formatEX(this)">
-                                    <span class="errorma"></span>
+                        <form class="method-payment" id="methodPayment">
+                            <section class="check">
+                                <section class="card">
+                                    <section class="input">
+                                        <input type="radio" name="trans" id="mada" value="mada" checked>
+                                        <label for="mada">بطاقة مدي</label>
+                                    </section>
+                                    <img width="40"
+                                        src="https://cdn.assets.salla.network/stores/vendor/checkout/images/icons/pay-option-mada.svg"
+                                        alt="img">
                                 </section>
-                                <section class="cvv">
-                                    <label for="cvv">رمز الأمان:</label>
-                                    <input type="text" name="cvv" id="cvv" class="input" placeholder="000"
-                                    oninput="formatCVV(this)">
-                                    <span class="errorma"></span>
+
+                                <section class="card">
+                                    <section class="input">
+                                        <input type="radio" name="trans" id="visa" value="visa">
+                                        <label for="visa">بطاقة بنكية</label>
+                                    </section>
+                                    <img width="40"
+                                        src="https://cdn.assets.salla.network/stores/vendor/checkout/images/icons/pay-option-credit-2.svg"
+                                        alt="img">
+                                </section>
+
+                                <section class="card">
+                                    <section class="input">
+                                        <input type="radio" name="trans" id="transfer" value="transfer">
+                                        <label for="tamara">تحويل بنكي</label>
+                                    </section>
+                                    <img width="40"
+                                        src="https://e7.pngegg.com/pngimages/279/210/png-clipart-wire-transfer-bank-account-payment-money-bank-angle-service.png"
+                                        alt="img">
                                 </section>
                             </section>
-                            <section class="delivery">
-                                <label for="loca">التوصيل إلي:</label>
-                                <input type="text" name="location" id="loca" class="input">
+                        </form>
+
+                        <form id="payment">
+                            <input style="display: none;" type="text" id="methodPaymentInput" name="methodPaymentInput">
+                            <section class="visa">
+                                <section class="visa-name">
+                                    <label for="visaName">الاسم علي البطاقة:</label>
+                                    <input type="text" name="visaName" id="visaName" class="input">
+                                    <span class="errorma"></span>
+                                </section>
+                                <section class="visaNumber">
+                                    <label for="visaNumber">رقم البطاقة:</label>
+                                    <input type="text" placeholder="0000 0000 0000 0000" name="visaNumber"
+                                        id="visaNumber" class="input" oninput="CreditCardNumber(this)">
+                                    <span class="errorma"></span>
+                                </section>
+                                <section class="date">
+                                    <section class="ex">
+                                        <label for="ex">تاريخ انتهاء البطاقة:</label>
+                                        <input type="text" name="ex" id="ex" class="input" placeholder="شهر / سنة"
+                                            oninput="formatEX(this)">
+                                        <span class="errorma"></span>
+                                    </section>
+                                    <section class="cvv">
+                                        <label for="cvv">رمز الأمان:</label>
+                                        <input type="text" name="cvv" id="cvv" class="input" placeholder="000"
+                                            oninput="formatCVV(this)">
+                                        <span class="errorma"></span>
+                                    </section>
+                                </section>
+                                <section class="delivery">
+                                    <label for="loca">التوصيل إلي:</label>
+                                    <input type="text" name="location" id="loca" class="input">
+                                    <span class="errorma"></span>
+                                </section>
+                                <section class="notes">
+                                    <label for="notes">المحلاظات:</label>
+                                    <textarea name="notes" id="notes"></textarea>
+                                </section>
+
+                                <section class="btn-pay">
+                                    <span>بالضغط علي الزرأدناه فأنت توافق علي <a href="#">الشروط والأحكام</a></span>
+                                    <button class="btn">تأكيد الدفع</button>
+                                </section>
+                            </section>
+                        </form>
+
+                        <form id="transferPayment" style="display: none;">
+                            <section class="name">
+                                <label for="name">اسم صاحب الحساب:</label>
+                                <input type="text" id="transferName" name="transferName">
                                 <span class="errorma"></span>
                             </section>
-                            <section class="notes">
-                                <label for="notes">المحلاظات:</label>
-                                <textarea name="notes" id="notes"></textarea>
+
+                            <section class="iban">
+                                <label for="transferName"> رقم الحساب او الايبان المحول منه :</label>
+                                <input type="text" id="transferNumber" name="transferNumber">
+                                <span class="errorma"></span>
                             </section>
 
                             <section class="btn-pay">
                                 <span>بالضغط علي الزرأدناه فأنت توافق علي <a href="#">الشروط والأحكام</a></span>
                                 <button class="btn">تأكيد الدفع</button>
                             </section>
-                        </section>
-                    </form>
-
+                        </form>
+                    </section>
                 </section>
                 <section class="left">
 

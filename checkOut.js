@@ -38,6 +38,13 @@ let ex = document.getElementById("ex");
 let cvv = document.getElementById("cvv");
 let loca = document.getElementById("loca");
 let payment = document.getElementById("payment");
+let trans = document.getElementsByName("trans")
+let methodPaymentInput = document.getElementById("methodPaymentInput")
+let methodPayment = document.getElementById("methodPayment")
+let transferPayment = document.getElementById("transferPayment")
+let transferName = document.getElementById("transferName")
+let transferNumber = document.getElementById("transferNumber")
+
 
 let setSucces = (ele) => {
     let parent = ele.parentElement
@@ -53,9 +60,33 @@ let setError = (ele, errorMa) => {
     let error = parent.querySelector(".errorma")
     error.innerHTML = errorMa
 
-
     ele.classList.add("error")
     ele.classList.remove("succes")
+}
+
+
+for (let i = 0; i < trans.length; i++) {
+    if (trans[i].checked) {
+        methodPaymentInput.value = trans[i].value;
+        break;
+    }
+}
+
+methodPayment.onchange = () => {
+    for (let i = 0; i < trans.length; i++) {
+        if (trans[i].checked) {
+            methodPaymentInput.value = trans[i].value;
+            break;
+        }
+    }
+
+    if (methodPaymentInput.value == "transfer") {
+        transferPayment.style.display = "block";
+        payment.style.display = "none";
+    } else {
+        payment.style.display = "block";
+        transferPayment.style.display = "none";
+    }
 }
 
 payment.onsubmit = (e) => {
@@ -67,6 +98,35 @@ payment.onsubmit = (e) => {
     visaExCheck()
     visaCvvCheck()
     locationCheck()
+}
+
+transferPayment.onsubmit = (e) => {
+    if (transferName.value == "" || transferNumber.value == "") {
+        e.preventDefault()
+
+        transferNameCheck()
+        transferNumberCheck()
+    }
+}
+
+let transferNameCheck = transferName.onblur = () => {
+    if (transferName.value == "") {
+        setError(transferName, "الاسم مطلوب")
+    } else if (transferName.value.length < 4) {
+        setError(transferName, "برجاء ادخال الاسم كامل وبشكل صحيح ")
+    } else {
+        setSucces(transferName)
+    }
+}
+
+let transferNumberCheck = transferNumber.onblur = () => {
+    if (transferNumber.value == "") {
+        setError(transferNumber, "رقم الحساب او الأيبان المحولمنه مطلوب")
+    } else if (transferNumber.value.length < 16) {
+        setError(transferNumber, "برجاء ادخال رقم الحساب أوالأيبان بشكل صحيح ")
+    } else {
+        setSucces(transferNumber)
+    }
 }
 
 let visaNameCheck = visaName.onblur = () => {
