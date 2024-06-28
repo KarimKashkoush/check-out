@@ -178,3 +178,20 @@ let locationCheck = loca.onblur = () => {
         setSucces(loca)
     }
 }
+
+
+let right = document.getElementById("right");
+
+right.onclick = (e) => {
+    e.stopPropagation();
+    right.style.border = "1px solid #fe470d"
+}
+
+
+document.addEventListener('click', function () {
+    right.style.border = "1px solid #bbbbbb5f"
+});
+
+right.addEventListener('click', function (e) {
+    e.stopPropagation();
+});
